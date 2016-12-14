@@ -139,7 +139,7 @@ func worldImage(t *testing.T) (im *image.RGBA, zoneOfColor map[color.RGBA]string
 		col := color.RGBA{uint8(hash >> 24), uint8(hash >> 16), uint8(hash >> 8), 255}
 		if name, ok := zoneOfColor[col]; ok {
 			if name != zoneName {
-				log.Fatalf("Color %+v dup: %s and %s", col, name, zoneName)
+				t.Fatalf("Color %+v dup: %s and %s", col, name, zoneName)
 			}
 		} else {
 			zoneOfColor[col] = zoneName
@@ -245,7 +245,7 @@ func testAllPixels_gen(t *testing.T) {
 
 func TestGenerate(t *testing.T) {
 	if !*flagGenerate {
-		t.Skip("skipping generationg without --generate flag")
+		t.Skip("skipping generation without --generate flag")
 	}
 
 	im, zoneOfColor := worldImage(t)
