@@ -35,6 +35,8 @@ import (
 	"sync"
 )
 
+//go:generate go test --tags=latlong_gen --generate -v
+
 // Populated by z_gen_tables.go:
 var (
 	degPixels          = -1
