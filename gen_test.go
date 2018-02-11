@@ -39,7 +39,7 @@ import (
 	"time"
 
 	"github.com/golang/freetype/raster"
-	"github.com/jonas-p/go-shp"
+	shp "github.com/jonas-p/go-shp"
 	"golang.org/x/image/math/fixed"
 )
 
